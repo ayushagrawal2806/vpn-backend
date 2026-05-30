@@ -103,6 +103,7 @@ public class GlobalExceptionHandler {
 
     @ExceptionHandler(Exception.class)
     public ResponseEntity<ErrorResponse> handleGenericException(Exception ex){
+        ex.printStackTrace();
         return buildErrorResponse(
                 "Something went wrong",
                 "INTERNAL_SERVER_ERROR",
